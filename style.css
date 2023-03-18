@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --body-color: #c1c7d0;
+    --white-color: #fff;
+    --purple-color: #5f50e4;
+    --red-color: #ff4948;
+    --gradient-1: #fd39bf;
+    --gradient-2: #4790ef;
+    --gradient-3: #12edba;
+    --gradient-4: #e33fbf;
+    --gradient-5: #6dc973;
+    --faint-grey: #e9e9f6;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-color);
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    position: relative;
+    width: 80rem;
+    background: var(--white-color);
+    border-radius: 1rem;
+    padding: 2rem 4rem;
+    overflow: hidden;
+    margin: 1rem ;
+    box-shadow: 14px 14px 40px rgba(0, 0, 0, 0.265);
+}
+
+.main::before{
+    content: "";
+    position: absolute;
+    bottom: -22rem;
+    right: 9rem;
+    border-radius: 8rem;
+    transform: rotate(56deg);
+    width: 30rem; 
+    height: 50rem;
+    background: linear-gradient(132deg, var(--gradient-1), var(--gradient-2), var(--gradient-3), var(--gradient-4), var(--gradient-5));
+}
+
+.main .container .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .container .navbar .logoBx{
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--purple-color);
+    border-radius: 50%;
+    line-height: 4rem;
+    text-align: center;
+}
+
+.main .container .navbar .logoBx .logo-text{
+    color: var(--white-color);
+    font-size: 1.5rem;
+}
+
+.main .container .navbar .left-nav{
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+}
+
+.main .container .navbar .left-nav .navbar-items{
+    list-style: none;
+    display: flex;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.main .container .navbar .left-nav .navbar-items li a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 550;
+    color: #000;
+}
+
+.main .container .navbar .btnBx{
+    display: flex;
+    gap: 1rem;
+}
+
+.btn{
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 0.4rem;
+}
+
+
+.login-btn{
+    background-color: var(--faint-grey);
+    color: #000;
+    font-weight: 600;
+}
+
+.signup-btn{
+    background-color: var(--red-color);
+    color: var(--faint-grey);
+    font-weight: 600;
+}
+
+.contentBx {
+    position: relative;
+    margin-top: 4.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30rem;
+    z-index: 99999;
+}
+
+.contentBx .heading-text{
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.23;
+}
+
+.contentBx p{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-purple{
+    background-color: var(--purple-color);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--white-color);
+    border-radius: 0.4rem;
+    display: inline-block;
+}
+
+.imgBx{
+    position: absolute;
+    bottom: -3.6rem;
+    right: -6rem;
+}
+
+.imgBx img{
+    width: 80rem;
+    display: block;
+}
+
+.membersBx{
+    position: relative;
+    margin-top: 3rem;
+    z-index: 9999;
+}
+
+.membersBx h5{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.membersBx .membersContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 5rem);
+    border-radius: 1.5rem;
+    width: fit-content;
+    box-shadow: 3px 4px 64px rgba(0, 0, 0, 0.165);
+}
+
+.membersBx .membersContainer .member{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 0;
+}
+
+.membersBx .membersContainer .member p{
+    font-size: 0.8rem;
+}
+
+.membersBx .membersContainer .member .iconBx{
+    width: 3.4rem;
+    height: 3.4rem;
+    position: relative;
+    background: var(--red-color);
+    border-radius: 50%; 
+    overflow: hidden;
+}
+
+.membersBx .membersContainer .member .iconBx img{
+    content: "";
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.infoBx{
+    position: absolute;
+    top: 12rem;
+    right: 4rem;
+    padding: 1rem;
+    width: 20rem;
+    border-radius: 1.2rem;
+    box-shadow: 14px 14px 30px rgba(0, 0, 0, 0.115), 
+                -14px -14px 30px rgba(0, 0, 0, 0.115);
+                background-color: rgba(255,255,255,0.4);
+    
+}
+
+.infoBx .iconBx{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.infoBx .iconBx a{
+    display: inline-block;
+}
+
+.infoBx img{
+    width: 5rem;
+}
+
+
+@media (max-width: 991px){
+    .main .container .navbar{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .main .container .navbar .left-nav{
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 470px){
+    .main{
+        padding: 2.3rem;
+    }
+    .contentBx {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 550px){
+    html{
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 890px){
+    .infoBx{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    .banner-img{
+        opacity: 0.4;
+    }
+}
